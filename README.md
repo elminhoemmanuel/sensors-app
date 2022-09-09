@@ -20,3 +20,11 @@ This project was made possible thanks to the following projects.
 ## License
 
 MIT © [Sung M. Kim](https://sung.codes)
+
+
+Notes;
+had only about one instance where props had to be passed down two levels down the component tree , therefore no sufficient reason to use context or a third party state management lib like redux
+
+will make the project responsive
+
+will declare custom tailwind directives to reduce repeated use of certain tailwind utility classes
