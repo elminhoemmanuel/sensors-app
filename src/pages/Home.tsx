@@ -51,7 +51,6 @@ const Home = () => {
                 handleFetchStats({ loading: false, error: '' }, data?.results!);
             })
             .catch((err) => {
-                console.log("entered error")
                 handleFetchStats({ loading: false, error: 'Something went wrong, could not fetch sensor stats' }, [] as SingleStatsResponse[])
             })
     }

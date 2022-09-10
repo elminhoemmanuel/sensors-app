@@ -23,7 +23,7 @@ const SensorTable = ({ data }: SensorTableProps) => {
                         <tr key={row.device_id} className='w-full'>
                             <td className='p-2'><p>{row.device_id}</p></td>
                             <td className='p-2'>
-                                {formatDate(row.last_online)} <br />
+                                { row.last_online && formatDate(row.last_online)} <br />
                                 Last Online
                             </td>
                             <td className='p-2'>

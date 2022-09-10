@@ -39,6 +39,11 @@ export interface Fetch {
     loading: boolean;
     error: string;
 }
+export interface FetchForm {
+    loading: boolean;
+    success: boolean;
+    error: string;
+}
 
 export interface PageData {
     page: number;

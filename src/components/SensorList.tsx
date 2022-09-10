@@ -6,6 +6,7 @@ import Loader from './common/Loader';
 import SensorTable from './SensorTable';
 import Pagination from './Pagination';
 import { useNavigate } from "react-router-dom";
+import Button from './common/Button';
 
 type SensorListProps = {
     sensors: SensorsResult[];
@@ -15,7 +16,7 @@ type SensorListProps = {
 }
 
 const SensorList = ({ sensors, fetchSensors, pageData, handlePageChange }: SensorListProps) => {
-    
+
     let navigate = useNavigate();
     
     return (
@@ -25,7 +26,7 @@ const SensorList = ({ sensors, fetchSensors, pageData, handlePageChange }: Senso
                 hasBorder={false}
                 hasIcon
                 className="py-5"
-                icon={<button onClick={()=>navigate(`/sensor/add`)} className='bg-gray-200 rounded-sm p-2 flex items-center justify-center focus:outline-none'><Plus className='w-6 h-6 text-gray-600' /></button>}
+                icon={<Button variant='secondary' onClick={()=>navigate(`/sensor/add`)} className='rounded-sm p-2 flex items-center justify-center'><Plus /></Button>}
             />
             <div className='border border-gray-300 p-3'>
                 {

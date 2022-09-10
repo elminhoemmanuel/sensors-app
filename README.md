@@ -34,3 +34,5 @@ why I didnt batch the requests on the home page together
 used react apexcharts as it offers extra things like zoom, pan and download data as csv
 
 why I used interfaces mainly for api responses as those are usually shaped like objects and types for component props typing
+
+use a better third party lib to handle dynamic application of classes

@@ -37,3 +37,41 @@
     animation: s3 1s infinite linear;
 }
 @keyframes s3 {to{transform: rotate(1turn)}}
+
+/*styles for checkbox*/
+.checkbox-wrapper input[type="checkbox"] {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 0.15em;
+    margin-right: 0.5em;
+    border: 0.15em solid #6B7280;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-wrapper > input:checked {
+    background-color: #6B7280;
+    position: relative;
+}
+
+.checkbox-wrapper >input:checked::before {
+    content: "\2714";
+    font-size: 1.5em;
+    color: #fff;
+    position: absolute;
+    right: 1px;
+    top: -1.3px;
+}
+
+.checkbox-wrapper input[type="checkbox"]:disabled {
+    border-color: #c0c0c0;
+    background-color: #c0c0c0;
+}
+
+.checkbox-wrapper input[type="checkbox"]:disabled + span {
+    color: #c0c0c0;
+}
