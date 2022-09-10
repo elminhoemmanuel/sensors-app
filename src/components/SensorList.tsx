@@ -1,10 +1,11 @@
 import React from 'react'
 import SectionHeader from './SectionHeader';
-import Settings from './icons/Settings';
+import Plus from './icons/Plus';
 import { Fetch, SensorsResult, PageData } from '../interfaces/home';
 import Loader from './common/Loader';
 import SensorTable from './SensorTable';
 import Pagination from './Pagination';
+import { useNavigate } from "react-router-dom";
 
 type SensorListProps = {
     sensors: SensorsResult[];
@@ -14,6 +15,9 @@ type SensorListProps = {
 }
 
 const SensorList = ({ sensors, fetchSensors, pageData, handlePageChange }: SensorListProps) => {
+    
+    let navigate = useNavigate();
+    
     return (
         <div className='mb-12'>
             <SectionHeader
@@ -21,7 +25,7 @@ const SensorList = ({ sensors, fetchSensors, pageData, handlePageChange }: Senso
                 hasBorder={false}
                 hasIcon
                 className="py-5"
-                icon={<div className='bg-gray-200 rounded-sm p-2 flex items-center justify-center cursor-pointer'><Settings className='w-6 h-6 text-gray-600' /></div>}
+                icon={<button onClick={()=>navigate(`/sensor/add`)} className='bg-gray-200 rounded-sm p-2 flex items-center justify-center focus:outline-none'><Plus className='w-6 h-6 text-gray-600' /></button>}
             />
             <div className='border border-gray-300 p-3'>
                 {
