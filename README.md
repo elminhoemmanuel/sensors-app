@@ -28,3 +28,9 @@ had only about one instance where props had to be passed down two levels down th
 will make the project responsive
 
 will declare custom tailwind directives to reduce repeated use of certain tailwind utility classes
+
+why I didnt batch the requests on the home page together
+
+used react apexcharts as it offers extra things like zoom, pan and download data as csv
+
+why I used interfaces mainly for api responses as those are usually shaped like objects and types for component props typing

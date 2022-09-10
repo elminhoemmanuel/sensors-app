@@ -1,8 +1,8 @@
-import React from 'react'
-import { navItems } from '../data'
-import { NavItem } from '../interfaces/nav'
-import { SideNavProps } from './layout/SideNav'
-import Menu from './icons/Menu'
+import React from 'react';
+import { navItems } from '../../data';
+import { NavItem } from '../../interfaces/data';
+import { SideNavProps } from './SideNav';
+import Menu from '../icons/Menu';
 
 const NormalSideNav = ({ toggle }: SideNavProps) => {
   return (

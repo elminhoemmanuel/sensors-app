@@ -1,6 +1,6 @@
-import React from 'react'
-import Input from './common/Input'
-import Search from './icons/Search'
+import React from 'react';
+import Input from './common/Input';
+import Search from './icons/Search';
 
 const Searchbar = () => {
   return (

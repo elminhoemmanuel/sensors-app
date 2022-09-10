@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 type PictureProps = {
-    variant: "primary" | "secondary"
+    variant: "primary" | "secondary";
 }
 
 const Picture = ({ variant }: PictureProps) => {

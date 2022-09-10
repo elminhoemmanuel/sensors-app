@@ -1,10 +1,10 @@
-import React from 'react'
-import { navItems } from '../data'
-import { NavItem } from '../interfaces/nav'
-import { SideNavProps } from './layout/SideNav'
-import Menu from './icons/Menu'
-import Picture from './icons/Picture'
-import Searchbar from './Searchbar'
+import React from 'react';
+import { navItems } from '../../data';
+import { NavItem } from '../../interfaces/data';
+import { SideNavProps } from './SideNav';
+import Menu from '../icons/Menu';
+import Picture from '../icons/Picture';
+import Searchbar from '../Searchbar';
 
 const ExpandedSideNav = ({ toggle }: SideNavProps) => {
     return (

@@ -1,6 +1,6 @@
-import React from 'react'
-import Picture from '../icons/Picture'
-import User from '../icons/User'
+import React from 'react';
+import Picture from '../icons/Picture';
+import User from '../icons/User';
 
 const TopNav = () => {
     return (

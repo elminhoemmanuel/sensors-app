@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import Footer from './Footer'
-import SideNav from './SideNav'
-import TopNav from './TopNav'
+import React, { useState } from 'react';
+import Footer from './Footer';
+import SideNav from './SideNav';
+import TopNav from './TopNav';
 
 type DashboardLayoutProps = {
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {

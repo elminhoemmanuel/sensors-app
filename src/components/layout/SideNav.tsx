@@ -1,6 +1,6 @@
-import React from 'react'
-import ExpandedSideNav from '../ExpandedSideNav';
-import NormalSideNav from '../NormalSideNav';
+import React from 'react';
+import ExpandedSideNav from './ExpandedSideNav';
+import NormalSideNav from './NormalSideNav';
 
  export type SideNavProps = {
     expand?: boolean;
