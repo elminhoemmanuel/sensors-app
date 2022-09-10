@@ -15,6 +15,10 @@ const SensorTable = ({ data }: SensorTableProps) => {
         return format(new Date(Number(val)), 'dd MMM yyyy')
     }
 
+    const getUrlExtension = (val:SensorsResult) =>{
+        return `location=${val.location}&customer=${val.customer}&min=${val.last_temp}`
+    }
+
     return (
         <table className='w-full'>
             <tbody className='w-full'>
@@ -38,7 +42,7 @@ const SensorTable = ({ data }: SensorTableProps) => {
                                 <Button
                                     className='px-5 py-2 mr-4'
                                     variant="secondary"
-                                    onClick={()=>navigate(`/sensor/${row.device_id}/edit`)}
+                                    onClick={()=>navigate(`/sensor/${row.device_id}/edit?${getUrlExtension(row)}`)}
                                 >
                                     Options
                                 </Button>

@@ -12,6 +12,8 @@ export interface AddSensorResult {
     device_id: string;
     customer: string;
     location: string;
+    last_online?: string;
+    last_temp: number;
 }
 
 export interface AddSensorResponse {

@@ -6,17 +6,20 @@ import Select from './common/Select';
 import Button from "./common/Button";
 import { useNavigate } from "react-router-dom";
 import { FetchForm } from '../interfaces/home';
-import { createSensor } from '../services/addSensor';
+import { editSensor } from '../services/editSensor';
 import Loader from './common/Loader';
+import { useParams, useSearchParams } from 'react-router-dom';
 
-const AddSensorBody = () => {
+const EditSensorBody = () => {
 
     let navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    let { sensorId } = useParams();
     const initialValues = {
         sensorId: "",
-        location: "",
-        customer: "customer-1",
-        min_temp_limit: undefined,
+        location: searchParams.get("location") ? searchParams.get("location")! : "" ,
+        customer: searchParams.get("customer") ? searchParams.get("customer")! : "" ,
+        min_temp_limit: searchParams.get("min") ? Number(searchParams.get("min")!) : undefined,
         max_temp_limit: undefined,
         monitor_min_temp: false,
         monitor_max_temp: false,
@@ -63,9 +66,9 @@ const AddSensorBody = () => {
             handleSubmitOps({ loading: false, success: false, error: 'Please fill all the required input fields' }, {} as AddSensorResult);
             return;
         }
-
+        
         handleSubmitOps({ loading: true, success: false, error: '' }, {} as AddSensorResult);
-        createSensor(values)
+        editSensor(values, sensorId)
             .then((data) => {
                 handleSubmitOps({ loading: false, success: true, error: '' }, data.result);
             })
@@ -80,20 +83,14 @@ const AddSensorBody = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-7'>
                 <div className='cols-span-1 lg:col-span-7'>
                     <h1 className='text-lg font-extrabold pb-3 border-b border-gray-300' >New Sensor</h1>
-                    <Input
-                        type="text"
-                        isBordered
-                        name='sensorId'
-                        value={values.sensorId}
-                        onChange={handleInputChange}
-                        className="my-7 block w-full lg:w-3/5"
-                        placeholder='Sensor Id'
-                    />
+
+                    <h1 className='text-lg font-extrabold my-7'>{sensorId}</h1>
+
                     <Input
                         type="text"
                         isBordered
                         name='location'
-                        value={values?.location}
+                        value={values.location}
                         onChange={handleInputChange}
                         className="my-7 block w-full lg:w-3/5"
                         placeholder='Location'
@@ -151,7 +148,7 @@ const AddSensorBody = () => {
                     variant="primary"
                     type='submit'
                 >
-                    {fetch.loading ? <Loader variant='light' /> : "Add Sensor"}
+                    {fetch.loading ? <Loader variant='light' /> : "Update Sensor"}
                 </Button>
                 <Button
                     className='px-10 py-2'
@@ -164,9 +161,9 @@ const AddSensorBody = () => {
             </div>
 
             <p className='text-red-400'>{fetch.error}</p>
-            <p>{fetch.success ? "Sensor created successfully" : ""}</p>
+            <p>{fetch.success ? "Sensor updated successfully" : ""}</p>
         </form>
     )
 }
 
-export default AddSensorBody
+export default EditSensorBody
