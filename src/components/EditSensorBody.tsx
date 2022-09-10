@@ -82,7 +82,7 @@ const EditSensorBody = () => {
         <form className='mt-6' onSubmit={handleFormSubmit}>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-7'>
                 <div className='cols-span-1 lg:col-span-7'>
-                    <h1 className='text-lg font-extrabold pb-3 border-b border-gray-300' >New Sensor</h1>
+                    <h1 className='text-lg font-extrabold pb-3 border-b border-gray-300' >Edit Sensor - {sensorId}</h1>
 
                     <h1 className='text-lg font-extrabold my-7'>{sensorId}</h1>
 

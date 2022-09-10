@@ -22,12 +22,8 @@ This project was made possible thanks to the following projects.
 MIT © [Sung M. Kim](https://sung.codes)
 
 
-Notes;
+My key decisions;
 had only about one instance where props had to be passed down two levels down the component tree , therefore no sufficient reason to use context or a third party state management lib like redux
-
-will make the project responsive
-
-will declare custom tailwind directives to reduce repeated use of certain tailwind utility classes
 
 why I didnt batch the requests on the home page together
 
@@ -35,4 +31,14 @@ used react apexcharts as it offers extra things like zoom, pan and download data
 
 why I used interfaces mainly for api responses as those are usually shaped like objects and types for component props typing
 
+Recommendations
+
+will make the project more responsive
+
+will declare custom tailwind directives to reduce repeated use of certain tailwind utility classes
+
 use a better third party lib to handle dynamic application of classes
+
+write more unit tests and even e2e & integration tests using cypress
+
+better form validation even using libraries like formik and yup
