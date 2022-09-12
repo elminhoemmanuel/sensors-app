@@ -22,8 +22,8 @@ const SensorDetails = () => {
     const fetchAllSensorData = () => {
         handleFetchData({ loading: true, error: '' }, {} as AllDetails);
         getAllSensorData(sensorId)
-            .then(([{data: {result: sensor}}, {data: {results: events}}, {data: {results: logs}}, {data: {results: weekly_average_stats}}, {data: {results: weekly_stats}}]) => {
-                let res = { sensor, events, logs, weekly_average_stats, weekly_stats }
+            .then(([{data: {result: sensor}}, {data: {results: events}}, {data: {results: logs}}, {data: {results: weekly_stats}}, {data: {results: weekly_average_stats}}]) => {
+                let res = { sensor, events, logs, weekly_stats, weekly_average_stats }
                 handleFetchData({ loading: false, error: '' }, res);
             })
             .catch((err) => {

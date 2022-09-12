@@ -77,8 +77,8 @@ export interface AllDetails {
     sensor: SensorData;
     events: SensorEvent[];
     logs: Omit<SensorEvent, 'event_name'>[];
-    weekly_average_stats: Stats[];
-    weekly_stats: StatsWeekly[];
+    weekly_stats: Stats[];
+    weekly_average_stats: StatsWeekly[];
 }
 
 

@@ -45,6 +45,8 @@ Some of the features/pages I developed  as requested are;
 
 - I will utilize a better form validation solution for the pages with forms perhaps using libraries like yup and formik.
 
+- I intend to improve the folder management by ensuring that individual components live in dedicated folders allowing for all files for that component to be in a single location.
+
 ## How To Use
 
 ```bash

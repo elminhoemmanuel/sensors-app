@@ -8,6 +8,11 @@ type LogsDisplayProps = {
 }
 
 const LogsDisplay = ({ data }: LogsDisplayProps) => {
+
+    const viewAll: Omit<SensorEvent, 'event_name'> = {
+        description: "View all", time: ""
+    }
+
     return (
         <div className=''>
             <SectionHeader className='mb-1' hasBorder={false} hasIcon={false} text="SYSTEM LOG" />
@@ -17,6 +22,7 @@ const LogsDisplay = ({ data }: LogsDisplayProps) => {
                         <LogCard data={item} key={item?.time} />
                     ))
                 }
+                <LogCard data={viewAll} className="cursor-pointer" />
             </div>
         </div>
     )
