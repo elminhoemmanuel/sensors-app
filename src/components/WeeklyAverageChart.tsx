@@ -23,7 +23,10 @@ const WeeklyAverageChart = ({ stats }: WeeklyAverageChartProps) => {
         colors: ["#cccccc","#4B5563"],
         stroke: {
             width: 1,
-            
+        },
+        markers: {
+            size: 3,
+            colors: "#4B5563"
         },
     }
 

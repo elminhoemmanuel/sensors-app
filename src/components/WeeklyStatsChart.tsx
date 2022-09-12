@@ -22,8 +22,11 @@ const WeeklyStatsChart = ({ stats }: WeeklyStatsChartProps) => {
             width: 4
         },
         markers: {
-            size: 2,
+            size: 4,
             colors: "#4B5563"
+        },
+        dataLabels:{
+            enabled: false,
         }
     }
 
