@@ -30,7 +30,7 @@ const SensorList = ({ sensors, fetchSensors, pageData, handlePageChange }: Senso
             />
             <div className='border border-gray-300 p-3'>
                 {
-                    fetchSensors.loading ?
+                    fetchSensors?.loading ?
                         <div className='my-3 flex items-center justify-center'><Loader variant='dark' /></div> :
                         <div>
                             {

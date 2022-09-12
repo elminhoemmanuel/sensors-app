@@ -23,7 +23,7 @@ const SensorTable = ({ data }: SensorTableProps) => {
         <table className='w-full'>
             <tbody className='w-full'>
                 {
-                    data.map((row) => (
+                    data?.map((row) => (
                         <tr key={row.device_id} className='w-full'>
                             <td className='p-2'><p>{row.device_id}</p></td>
                             <td className='p-2'>

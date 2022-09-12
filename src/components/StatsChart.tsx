@@ -8,8 +8,8 @@ type StatsChartProps = {
 
 const StatsChart = ({ stats }: StatsChartProps) => {
 
-    let chartSeries = stats.map((stat) => {
-        let data = stat.stats.map(each => each.temp);
+    let chartSeries = stats?.map((stat) => {
+        let data = stat?.stats?.map(each => each.temp);
         return {
             name: stat.device_id,
             data,

@@ -12,7 +12,7 @@ const NormalSideNav = ({ toggle }: SideNavProps) => {
         </button>
         <div className='flex flex-col pt-5'>
             {
-                navItems.map((item: NavItem)=>(
+                navItems?.map((item: NavItem)=>(
                     <button key={item.id} className="outline-none px-3 py-5 flex items-center justify-center">
                         {item.icon}
                     </button>

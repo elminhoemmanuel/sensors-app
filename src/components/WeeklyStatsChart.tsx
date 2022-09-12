@@ -19,10 +19,10 @@ const WeeklyStatsChart = ({ stats }: WeeklyStatsChartProps) => {
         },
         colors: ["#cccccc"],
         stroke: {
-            width: 4
+            width: 4,
         },
         markers: {
-            size: 4,
+            size: 3,
             colors: "#4B5563"
         },
         dataLabels:{

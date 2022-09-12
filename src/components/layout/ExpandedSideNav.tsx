@@ -20,7 +20,7 @@ const ExpandedSideNav = ({ toggle }: SideNavProps) => {
 
             <div className='flex flex-col pt-5'>
                 {
-                    navItems.filter((each: NavItem) => each.id > 1).map((item: NavItem) => (
+                    navItems?.filter((each: NavItem) => each.id > 1).map((item: NavItem) => (
                         <button key={item.id} className="outline-none px-3 py-5 flex items-center">
                             <div>{item.icon}</div>
                             <p className='text-sm font-extrabold ml-2'>{item.name}</p>

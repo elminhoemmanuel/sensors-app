@@ -23,7 +23,7 @@ const StatsDisplay = ({ fetchStats, stats }: StatsDisplayProps) => {
             />
             <div>
                 {
-                    fetchStats.loading ?
+                    fetchStats?.loading ?
                         <div className='my-3 flex items-center justify-center'><Loader variant='dark' /></div> :
                         <div>
                             {
